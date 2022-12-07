@@ -14,3 +14,21 @@
   echo "Visit http://127.0.0.1:8080 to use your application"
   kubectl --namespace {{ .Release.Namespace }} port-forward $POD_NAME 8080:$CONTAINER_PORT
 {{- end }}
+2. To test the application, run the following command:
+curl -s -H"content-type:application/json" http://127.0.0.1:8080/process -d'{
+    "requests": [
+        {
+            "pipeline": "nyc_taxi_demo_3_local_compute",
+            "data": {
+                "pu_loc_id": 41,
+                "do_loc_id": 57,
+                "pu_time": "2020/4/1 0:41",
+                "do_time": "2020/4/1 0:56",
+                "trip_distance": 6.79,
+                "fare_amount": 21.0
+            }
+        }
+    ]
+}'
+You might need to replace 127.0.0.1:8080 with the application URL from step 1. You should see the following output if everything setups well:
+{"results":[{"pipeline":"nyc_taxi_demo_3_local_compute",...}}]}
