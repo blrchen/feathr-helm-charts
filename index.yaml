@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   feathr-online-server:
   - apiVersion: v2
+    created: "2022-12-08T06:11:33.208838795Z"
+    description: A Helm chart for Feathr Online Server
+    digest: ced96b0735687d8db0bb52f5a4d596d903b29a1bea154e92fcc9d621f515c97f
+    name: feathr-online-server
+    type: application
+    urls:
+    - https://github.com/blrchen/feathr-helm-charts/releases/download/feathr-online-server-0.1.1/feathr-online-server-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     created: "2022-12-07T16:15:40.136760124Z"
     description: A Helm chart for Feathr Online Server
     digest: 058b89c5ce46266876fa80a3e7119f0f640c4cd300ccb33392050099539fa9d0
@@ -10,4 +19,4 @@ entries:
     urls:
     - https://github.com/blrchen/feathr-helm-charts/releases/download/feathr-online-server-0.1.0/feathr-online-server-0.1.0.tgz
     version: 0.1.0
-generated: "2022-12-07T16:15:40.136767625Z"
+generated: "2022-12-08T06:11:33.208846395Z"
